@@ -2,18 +2,11 @@
 
 This is our project repository for our INF367A project: **Spaceship Titanic**.
 
-Here aim to use given tabular data on passengers to predict whether the passengers on the Spaceship Titanic were transported by a space anomoly. To achieve this, we implement several standard models suited to the problem, as well as two novel state-of-the-art models: GRANDE and TABM.
+Here aim to use given tabular data on passengers to predict which of the passengers on the Spaceship Titanic were transported by a space anomoly. To achieve this, we implement several standard models suited to the problem, as well as two novel state-of-the-art models: GRANDE and TABM.
+
 
 This project is made for the ML Kaggle competition: [Spaceship Titanic](https://www.kaggle.com/competitions/spaceship-titanic/).
 
-
-## Project Structure
-
-- **data/**: Contains the Kaggle dataset files and the processed datasets.
-- **1-preprocessing**: Code for data cleaning and feature engineering.
-- **2-standard-models/**: Training some standard models.
-- **3-GRANDE**: Johannes GRANDE implementation
-- **4-TABM**: Elias TABM implementation
 
 
 ## Project data
@@ -33,6 +26,17 @@ The Kaggle dataset includes 14 features that describe each passenger:
 
 All data files are located in the `data/` directory.
 
+## Evaluation
+Evaluation is simply the accuracy of the generated predicitons: correct ÷ total predictions.
+
+
+## Project Structure
+
+- **data/**: Contains the Kaggle dataset files and the processed datasets.
+- **1-preprocessing**: Code for data cleaning and feature engineering.
+- **2-standard-models/**: Training some standard models.
+- **3-GRANDE**: Johannes GRANDE implementation
+- **4-TABM**: Elias TABM implementation
 
 
 ## Goal

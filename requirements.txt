@@ -1,1 +1,8 @@
 pandas
+scikit-learn
+seaborn
+GRANDE
+numpy
+matplotlib
+xgboost
+lightgbm
