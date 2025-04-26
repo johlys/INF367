@@ -13,9 +13,9 @@ This project is made for the ML Kaggle competition: [Spaceship Titanic](https://
 
 1. Clone this repository.
 2. Install the required libraries (`requirements.txt`).
-3. View **EDA-and-preprocessing** notebook to see the EDA and preprocess the data.
-4. View **2-models** notebook to see the training, tuning and evaluation of our models, excepting TABM and GRANDE.
-5. View **3-TABM** and **4-GRANDE** to see our individual implementations of a novel method.
+3. View **1-EDA-and-preprocessing.ipynb** notebook to see the EDA and preprocess the data.
+4. View **2-models.ipynb** notebook to see the training, tuning and evaluation of our models, excepting TABM and GRANDE.
+5. View **3-TABM.ipynb** and **4-GRANDE.ipynb** to see our individual implementations of a novel method.
 
 
 ## Project data
@@ -46,7 +46,7 @@ Evaluation is simply the accuracy of the generated predicitons: correct ÷ total
 - **submissions/**: Contains all submissions delivered for the Kaggle Competition.
 - **1-EDA-and-preprocessing**: Code for data cleaning and feature engineering.
 - **2-models**: Training some standard models.
-- **3-TABM**: Elias TABM implementationJohannes GRANDE implementation
+- **3-TABM**: Elias TABM implementation
 - **4-GRANDE**: Johannes GRANDE implementation
 
 
