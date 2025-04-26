@@ -8,6 +8,14 @@ Here aim to use given tabular data on passengers to predict which of the passeng
 This project is made for the ML Kaggle competition: [Spaceship Titanic](https://www.kaggle.com/competitions/spaceship-titanic/).
 
 
+## How to view and reproduce:
+
+1. Clone this repository.
+2. Install the required libraries (`requirements.txt`).
+3. View **EDA-and-preprocessing** notebook to see the EDA and preprocess the data.
+4. View **2-models** notebook to see the training, tuning and evaluation of our models, excepting TABM and GRANDE.
+5. View **3-TABM** and **4-GRANDE** to see our individual implementations of a novel method.
+
 
 ## Project data
 
@@ -26,6 +34,7 @@ The Kaggle dataset includes 14 features that describe each passenger:
 
 All data files are located in the `data/` directory.
 
+
 ## Evaluation
 Evaluation is simply the accuracy of the generated predicitons: correct ÷ total predictions.
 
@@ -33,24 +42,16 @@ Evaluation is simply the accuracy of the generated predicitons: correct ÷ total
 ## Project Structure
 
 - **data/**: Contains the Kaggle dataset files and the processed datasets.
-- **1-preprocessing**: Code for data cleaning and feature engineering.
-- **2-standard-models/**: Training some standard models.
-- **3-GRANDE**: Johannes GRANDE implementation
-- **4-TABM**: Elias TABM implementation
+- **submissions/**: Contains all submissions delivered for the Kaggle Competition.
+- **1-EDA-and-preprocessing**: Code for data cleaning and feature engineering.
+- **2-models**: Training some standard models.
+- **3-TABM**: Elias TABM implementationJohannes GRANDE implementation
+- **4-GRANDE**: Johannes GRANDE implementation
 
 
 ## Goal
 - Thorough data analysis.
-- Preprocess the dataset to handle missing values, feature transformations and encoding.
-- Train multiple standard machine learning models to predict the target variable `Transported`.
+- Preprocess the dataset to handle missing values, feature engineering and encoding.
+- Train and optimize multiple standard machine learning models to predict the target variable `Transported`.
 - Implement our own novel method to the project: GRANDE and TABM.
 - Evaluate models and submit to Kaggle!
-
-
-
-## How to Run
-
-1. Clone this repository.
-2. Install the required libraries (`requirements.txt`).
-3. Run **preprocessing** notebook to process data.
-4. ....
