@@ -56,3 +56,27 @@ Evaluation is simply the accuracy of the generated predicitons: correct ÷ total
 - Train and optimize multiple standard machine learning models to predict the target variable `Transported`.
 - Implement our own novel method to the project: GRANDE and TABM.
 - Evaluate models and submit to Kaggle!
+
+
+
+# TABM Description:
+
+This project includes Elias' implementation of **TABM** which is a simple but powerful method for tabular deep learning.
+
+TABM makes a single MLP behave like an ensemble of many MLPs by sharing most weights and producing multiple predictions per input. It's inspired by BatchEnsemble but tuned specifically for tabular tasks.
+Thanks to the weight sharing, TABM gets better performance, faster training, and smaller models compared to traditional deep ensembles or transformer-style models.
+
+Key ideas:
+- Multiple predictions per sample, trained together, we choose the amount by defining **k**.
+
+- Heavy weight sharing to keep it efficient and faster.
+
+- You get a strong generalization from the ensemble structure.
+
+Code:
+You can see the full implementation in the **3-TABM.ipynb** notebook.
+
+This work builds on code from the authors' official repository: [TabM GitHub Repo](https://github.com/yandex-research/tabm).
+
+You can read the paper on the novel model here: [TabM Paper](https://arxiv.org/abs/2410.24210).
+
