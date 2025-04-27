@@ -1,5 +1,4 @@
 # INF367A Project: Spaceship Titanic
-Contributors: Johannes Krispinus Lysne and Elias Ruud Aronsen
 
 This is our project repository for our INF367A project: **Spaceship Titanic**.
 
