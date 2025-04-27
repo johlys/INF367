@@ -89,10 +89,52 @@ This work builds on code from the authors' official repository: [TabM GitHub Rep
 You can read the paper on the novel model here: [TabM Paper](https://arxiv.org/abs/2410.24210).
 
 
+# GRANDE: Gradient-Based Decision Tree Ensembles for Tabular Data
 
-# GRANDE Description:
+## Spaceship Titanic – GRANDE Implementation
 
-### My Implementation:
+This repository demonstrates the application of the GRANDE (Gradient-Based Decision Tree Ensembles) paper on Kaggle’s Spaceship Titanic dataset in a fully reproducible Jupyter notebook (`4-GRANDE.ipynb`).
 
-#### Info:
+## Overview
 
+**GRANDE** is a novel, end-to-end gradient-based method for learning hard, axis-aligned decision tree ensembles on tabular data. It combines:
+
+- **Axis-aligned splits** for strong inductive bias on tabular features  
+- **Dense, differentiable tree representation** with a straight-through estimator  
+- **Instance-wise estimator weighting** to encourage both simple and complex local rules  
+- **Regularization** via feature- and data-subsetting, plus dropout on trees  
+
+## Notebook Structure
+
+- `4-GRANDE.ipynb` — end-to-end notebook  
+  1. **Data loading & preprocessing** — same pipeline as our baseline models (see `1-EDA-and-preprocessing.ipynb`)
+  2. **Optuna HPO** — 20-trial tuning of GRANDE’s built-in search space  
+  3. **Final training** — retrain with best hyperparameters  
+  4. **Evaluation** — compute held-out validation accuracy  
+  5. **Submission** — generate Space Titanic predictions  
+
+## Results
+
+On a 20-trial Optuna study, we achieved a best CV accuracy of 81.66% with:
+```
+{
+  "depth": 7,
+  "n_estimators": 1289,
+  "learning_rate_weights": 0.0123,
+  "learning_rate_index": 0.1572,
+  "learning_rate_values": 0.0454,
+  "learning_rate_leaf": 0.1181,
+  "cosine_decay_steps": 0,
+  "dropout": 0,
+  "selected_variables": 0.75,
+  "data_subset_fraction": 1.0,
+  "focal_loss": False,
+  "temperature": 0.25
+}
+```
+
+We generated predictions on the processed test set using our final GRANDE model. Uploading the predictions to Kaggle yielded an accuracy of 0.80009 (~80.01%). Putting us in a competitive position in the leaderboard.
+
+## Links
+- [GRANDE paper](https://arxiv.org/abs/2309.17130)
+- [GRANDE GitHub](https://github.com/s-marton/GRANDE)
