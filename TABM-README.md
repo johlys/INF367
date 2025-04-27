@@ -34,9 +34,23 @@ The workflow is as follows:
    - The model is trained using mini-batches with early stopping based on validation loss. I sat the patience to 20 after a few tries finding that any higher just wastes time.
    - Average training loss, validation loss, and accuracy are monitored at each epoch.
 
-5. **Final Model Selection and Evaluation**  
-   After the search, the best hyperparameter combination (based on validation accuracy) is selected.  
-   The model is then retrained on the full training dataset and evaluated against other models used in the project to assess its performance.
+5. **Cross-Validation for Final Evaluation**  
+   After selecting the best hyperparameter configuration based on validation accuracy, I further evaluated the model using five-fold stratified cross-validation.  
+   - The full dataset was split into five folds while maintaining class distribution.
+   - For each fold, the model was trained on four folds and validated on the remaining fold.
+   - Validation accuracies from all folds were collected, and the mean validation accuracy was reported as a more robust performance estimate.
+
+6. **Final Model Training**  
+   After cross-validation, a final TABM model was trained from scratch on the full dataset using the best hyperparameters, ensuring it had access to all available data for maximum performance.
+
+## Final Result
+
+- The final model achieved a validation accuracy of **0.8470**, which is a strong result during training.
+- However, the final Kaggle leaderboard score for the TABM model was **0.79541**, indicating signs of overfitting to the training data.
+- The five-fold cross-validation gave a mean validation accuracy of **0.7927**, suggesting that the true generalization performance of the model is slightly lower than the single validation split suggested.
+
+I hypothesize that the model's complexity — and the high capacity of MLP architectures in general — made it prone to overfitting given the relatively small size of the Spaceship Titanic dataset.  
+Despite the regularization strategies used (dropout, weight decay, batch normalization), the model likely still overfit subtle patterns in the training data that did not generalize well to unseen test data.
 
 
 #### Info:
