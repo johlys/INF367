@@ -56,7 +56,7 @@ Evaluation is simply the accuracy of the generated predicitons: correct ÷ total
 - Evaluate models and submit to Kaggle!
 
 
-
+(more detailed descriptions of our implementations can be found in **TABM-README.md** and **GRANDE-README.md**)
 # TABM Description:
 
 This project includes Elias' implementation of **TABM** which is a simple but powerful method for tabular deep learning.
