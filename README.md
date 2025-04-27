@@ -66,14 +66,22 @@ This project includes Elias' implementation of **TABM** which is a simple but po
 TABM makes a single MLP behave like an ensemble of many MLPs by sharing most weights and producing multiple predictions per input. It's inspired by BatchEnsemble but tuned specifically for tabular tasks.
 Thanks to the weight sharing, TABM gets better performance, faster training, and smaller models compared to traditional deep ensembles or transformer-style models.
 
-Key ideas:
+#### Key ideas:
 - Multiple predictions per sample, trained together, we choose the amount by defining **k**.
 
 - Heavy weight sharing to keep it efficient and faster.
 
 - You get a strong generalization from the ensemble structure.
 
-Code:
+### My Implementation:
+
+For my implementation, I build on the authors' own PyTorch codebase.
+I load and split the preprocessed data (see 1-EDA-and-preprocessing.ipynb) into DataLoaders, define a setup function that handles various model parameters, and implement the training loop.
+The model is trained for 30 trials with a random assortment of parameters in each trial.
+The best set of parameters (based on validation accuracy) is then chosen to train on the full training set.
+Finally, I evaluate the final TABM model and compare it to scores achieved by other models.
+
+#### Info:
 You can see the full implementation in the **3-TABM.ipynb** notebook.
 
 This work builds on code from the authors' official repository: [TabM GitHub Repo](https://github.com/yandex-research/tabm).
