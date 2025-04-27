@@ -1,7 +1,4 @@
 # INF367A Project: Spaceship Titanic
-Contributors: Johannes Krispinus Lysne and Elias Ruud Aronsen
-
-This is our project repository for our INF367A project: **Spaceship Titanic**.
 
 Here aim to use given tabular data on passengers to predict which of the passengers on the Spaceship Titanic were transported by a space anomoly. To achieve this, we implement several standard models suited to the problem, as well as two novel state-of-the-art models: GRANDE and TABM.
 
